@@ -23,17 +23,17 @@
 ; i'm not even sure what the behaviour should be!
 
 ; remap common cmd key shortcuts (copy, paste, undo etc)
-#a::^a
-#c::^c
-#v::^v
-#x::^x
-#f::^f
-#o::^o
-#s::^s
-#z::^z
-#y::^y
-#t::^t
-#r::^r
-#b::^b
-#w::^w
+#a::Send {Ctrl down}a{Ctrl up}
+#c::Send {Ctrl down}c{Ctrl up}
+#v::Send {Ctrl down}v{Ctrl up}
+#x::Send {Ctrl down}x{Ctrl up}
+#f::Send {Ctrl down}f{Ctrl up}
+#o::Send {Ctrl down}o{Ctrl up}
+#s::Send {Ctrl down}s{Ctrl up}
+#z::Send {Ctrl down}z{Ctrl up}
+#y::Send {Ctrl down}y{Ctrl up}
+#t::Send {Ctrl down}t{Ctrl up}
+#r::Send {Ctrl down}r{Ctrl up}
+#b::Send {Ctrl down}b{Ctrl up}
+#w::Send {Ctrl down}w{Ctrl up}
 #q::Send !{F4}
