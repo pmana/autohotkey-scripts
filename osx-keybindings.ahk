@@ -1,18 +1,18 @@
 ; cmd + arrow keys for movement, shift to also select
 #Left::Send {Home}
 #Right::Send {End}
-#Up::Send {Lctrl down}{Home}{Lctrl up}
-#Down::Send {Lctrl down}{End}{Lctrl up}
+#Up::Send {Ctrl down}{Home}{Ctrl up}
+#Down::Send {Ctrl down}{End}{Ctrl up}
 #+Left::Send +{Home}
 #+Right::Send +{End}
-#+Up::Send {Lshift down}{Lctrl down}{Home}{Lctrl up}{Lshift up}
-#+Down::Send {Lshift down}{Lctrl down}{End}{Lctrl up}{Lshift up}
+#+Up::Send {Shift down}{Ctrl down}{Home}{Ctrl up}{Shift up}
+#+Down::Send {Shift down}{Ctrl down}{End}{Ctrl up}{Shift up}
 
 ; i use the window movement shortcuts on windows, so remap to ctrl+win+arrow
-^#Left::Send {Lwin down}{Left}{Lwin up}
-^#Right::Send {Lwin down}{Right}{Lwin up}
-^#Up::Send {Lwin down}{Up}{Lwin up}
-^#Down::Send {Lwin down}{Down}{Lwin up}
+^#Left::Send {LWin down}{Left}{LWin up}
+^#Right::Send {LWin down}{Right}{LWin up}
+^#Up::Send {LWin down}{Up}{LWin up}
+^#Down::Send {LWin down}{Down}{LWin up}
 
 ; alt + arrow keys for word-by-word movement, shift to also select
 !Left::Send ^{Left}
