@@ -1,4 +1,4 @@
-; cmd + arrow keys for movement, shift to also select
+; cmd + arrow keys for movement, shift to select
 #Left::Send {Home}
 #Right::Send {End}
 #Up::Send ^{Home}
@@ -14,13 +14,15 @@
 ^#Up::Send #{Up}
 ^#Down::Send #{Down}
 
-; alt + arrow keys for word-by-word movement, shift to also select
+; alt + arrow keys for word-by-word movement, shift to select
 !Left::Send ^{Left}
 !Right::Send ^{Right}
+!Up::Send {Home}
+!Down::Send {End}
 !+Left::Send ^+{Left}
 !+Right::Send ^+{Right}
-; i don't seem to have any muscle memory for alt+up/down, so won't include them
-; i'm not even sure what the behaviour should be!
+!+Up::Send +{Home}
+!+Down::Send +{End}
 
 ; backspace, delete
 !Backspace::Send ^{Backspace}
