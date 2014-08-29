@@ -44,7 +44,30 @@
 #w::Send ^w ; close window
 #q::Send !{F4} ; close application
 
+#b::Send ^b ; resharper go to definition
+
 #t::Send ^t ; new tab
+#+t::Send ^+t ; reopen tab
 #r::Send ^r ; reload tab
 
-#b::Send ^b ; resharper go to definition
+; cmd + L - needs to disable win + L (lock workstation)!
+#l::
+    DisableLockWorkstation()
+    Sleep, 50
+    Send ^l ; select address bar
+    EnableLockWorkstation()
+return
+
+^#l::DllCall("LockWorkStation") ; lock workstation is now CTRL+WIN+L
+
+EnableLockWorkstation() {
+    SetDisableLockWorkstationRegKeyValue(0)
+}
+
+DisableLockWorkstation() {
+    SetDisableLockWorkstationRegKeyValue(1)
+}
+
+SetDisableLockWorkstationRegKeyValue(value) {
+    RegWrite, REG_DWORD, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Policies\System, DisableLockWorkstation, %value%
+}
