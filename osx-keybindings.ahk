@@ -22,6 +22,12 @@
 ; i don't seem to have any muscle memory for alt+up/down, so won't include them
 ; i'm not even sure what the behaviour should be!
 
+; backspace, delete
+!Backspace::Send ^{Backspace}
+#Backspace::Send {Shift down}{Home}{Shift up}{Delete}
+!Delete::Send ^{Delete}
+#Delete::Send {Shift down}{End}{Shift up}{Delete}
+
 ; remap common cmd key shortcuts (copy, paste, undo etc)
 #a::Send {Ctrl down}a{Ctrl up}
 #c::Send {Ctrl down}c{Ctrl up}
