@@ -44,6 +44,10 @@
 #w::Send ^w ; close window
 #q::Send !{F4} ; close application
 
+; open application launcher - for some reason it can't make this binding itself,
+; so i've bound it to alt+space in the launcher
+#Space::Send !{Space}
+
 #b::Send ^b ; resharper go to definition
 
 #t::Send ^t ; new tab
