@@ -26,9 +26,9 @@
 
 ; backspace, delete
 !Backspace::Send ^{Backspace}
-#Backspace::Send {Shift down}{Home}{Shift up}{Delete}
+#Backspace::Send +{Home}{Delete}
 !Delete::Send ^{Delete}
-#Delete::Send {Shift down}{End}{Shift up}{Delete}
+#Delete::Send +{End}{Delete}
 
 ; remap common cmd key shortcuts (copy, paste, undo etc)
 #c::Send ^c ; copy
